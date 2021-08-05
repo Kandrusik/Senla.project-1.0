@@ -100,6 +100,5 @@ public class Main {
                 .setCheckoutButton()
                 .yourPersonInformation("Oleg", "Oleg", "12345")
                 .setContinueOrderButton();
-//        Assertions.assertEquals(methods.inventoryItemPrice, methods.summarySubtotalLabel);
     }
 }

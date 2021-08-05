@@ -41,11 +41,4 @@ public class BasePage {
     SelenideElement checkoutButton = $("#checkout");
     SelenideElement finishOrderButton = $("#finish");
     SelenideElement continueShoppingButton = $("#continue-shopping");
-
-
-//    // Test
-//    String inventoryItemPrice = $(By.xpath("*[@id=\"checkout_summary_container\"]" +
-//            "/div/div[1]//text()[2]")).getSelectedValue();
-//    String summarySubtotalLabel = $(By.xpath("*[@id=\"checkout_summary_container\"]" +
-//            "/div/div[2]/div[5]/text()[2]")).getSelectedValue();
 }
