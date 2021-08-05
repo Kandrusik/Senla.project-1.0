@@ -25,7 +25,6 @@ public class LoginPage extends BasePage {
         return this;
     }
 
-
     public LoginPage openLoginPage() {
         open("https://www.saucedemo.com/");
         return this;
