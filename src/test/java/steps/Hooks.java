@@ -23,5 +23,4 @@ public class Hooks {
             Log.info("--- Сценарий '" + scenario.getName() + "' выполнен успешно ---");
         }
     }
-
 }
