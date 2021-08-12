@@ -2,6 +2,8 @@ package steps;
 
 import allPages.BasketPage;
 import allPages.CheckoutPage;
+import io.cucumber.java.ru.И;
+import io.cucumber.java.ru.Когда;
 import io.cucumber.java.ru.Тогда;
 import org.openqa.selenium.By;
 
@@ -15,7 +17,7 @@ public class Steps {
     CheckoutPage checkoutPage = new CheckoutPage();
 
 
-    @Тогда("^добавляем рюкзак и краснау футболку в корзину$")
+    @Когда("^добавляем рюкзак и краснау футболку в корзину$")
     public void addFirstAndSecondProducts() {
         basketPage.scanTableBody()
                 .setAddAllItemToCartButton();
@@ -27,13 +29,13 @@ public class Steps {
         basketPage.setCheckoutButton();
     }
 
-    @Тогда("^заполняем пользовательские данные и нажимаем Continue$")
+    @И("^заполняем пользовательские данные и нажимаем Continue$")
     public void checkGadgetPrice() {
         checkoutPage.yourPersonInformation("Oleg", "Oleg", "12345")
                 .setContinueOrderButton();
     }
 
-    @Тогда("^подтверждаем заказ нажатием на поле Finish$")
+    @И("^подтверждаем заказ нажатием на поле Finish$")
     public void clickOnFinishOrderButton() {
         checkoutPage.setFinishOrderButton();
     }
@@ -45,7 +47,7 @@ public class Steps {
     }
 
 
-    @Тогда("^выполняем нажатие на ссылку \"([^\"]*)\"$")
+    @Когда("^выполняем нажатие на ссылку \"([^\"]*)\"$")
     public void checkFinishOder(String link) {
         $(By.xpath("//div[text()=\"" + link + "\"]")).click();
     }
