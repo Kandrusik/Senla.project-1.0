@@ -32,7 +32,8 @@ public class BasketPage extends BasePage {
         return this;
     }
 
-    public void setCheckoutButton() {
+    public BasketPage setCheckoutButton() {
         checkoutButton.click();
+        return this;
     }
 }

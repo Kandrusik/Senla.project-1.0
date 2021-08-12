@@ -18,7 +18,6 @@ public class LoginPage extends BasePage {
     public SelenideElement welcomeMessage = $(By.xpath("//span[text()='Products']"));
 
 
-
     public LoginPage singIn() throws IOException {
         Properties props = new Properties();
         props.load(new FileInputStream("src/main/resources/user.properties"));
@@ -28,12 +27,6 @@ public class LoginPage extends BasePage {
         return this;
     }
 
-    public void writeFieldsUser() throws IOException {
-        Properties props = new Properties();
-        props.load(new FileInputStream("src/main/resources/user.properties"));
-        loginField.sendKeys(props.getProperty("user.username"));
-        passwordField.sendKeys(props.getProperty("user.password"));
-    }
 
     public LoginPage openLoginPage() {
         open("https://www.saucedemo.com/");

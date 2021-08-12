@@ -11,6 +11,7 @@ public class CheckoutPage extends BasePage {
 
     // Message text
     public SelenideElement thankYouForYourOrder = $("#checkout_complete_container > h2");
+
     // Field Person
     SelenideElement firstNameOrder = $("#first-name");
     SelenideElement lastNameOrder = $("#last-name");
