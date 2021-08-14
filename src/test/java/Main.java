@@ -35,7 +35,7 @@ public class Main {
 
     @Test
     @Order(1)
-    public void loginTest() throws IOException {
+    public void testLoginTest() throws IOException {
         loginPage.openLoginPage()
                 .singIn()
                 .welcomeMessage.shouldHave(text("PRODUCTS"));
@@ -44,7 +44,7 @@ public class Main {
 
     @Test
     @Order(2)
-    public void BuyThings() {
+    public void testBuyThings() {
         basketPage.scanTableBody()
                 .setAddAllItemToCartButton()
                 .setBasketButton();
@@ -58,7 +58,7 @@ public class Main {
 
     @Test
     @Order(3)
-    public void CancelOfBuyingThings() {
+    public void testCancelOfBuyingThings() {
         basketPage.scanTableBody()
                 .setAddAllItemToCartButton()
                 .setBasketButton();
@@ -72,7 +72,7 @@ public class Main {
 
     @Test
     @Order(4)
-    public void DeletingItemsFromTheTrash() {
+    public void testDeletingItemsFromTheTrash() {
         basketPage.scanTableBody()
                 .setAddAllItemToCartButton()
                 .setBasketButton();
@@ -84,7 +84,7 @@ public class Main {
 
     @Test
     @Order(5)
-    public void CheckingTheTotalAmount() {
+    public void testCheckingTheTotalAmount() {
         basketPage.scanTableBody()
                 .setAddAllItemToCartButton()
                 .setBasketButton();
