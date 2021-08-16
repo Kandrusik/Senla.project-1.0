@@ -1,3 +1,4 @@
+import allPages.BasePage;
 import allPages.BasketPage;
 import allPages.CheckoutPage;
 import allPages.LoginPage;
@@ -11,8 +12,9 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class MainTest {
+public class MainTest extends BasePage {
 
+    BasePage basePage = new BasePage();
     LoginPage loginPage = new LoginPage();
     CheckoutPage checkoutPage = new CheckoutPage();
     BasketPage basketPage = new BasketPage();
@@ -46,8 +48,8 @@ public class MainTest {
     @Order(2)
     public void testBuyThings() {
         basketPage.scanTableBody()
-                .setAddAllItemToCartButton()
-                .setBasketButton();
+                .setAddAllItemToCartButton();
+        basePage.setBasketButton();
         basketPage.setCheckoutButton();
         checkoutPage.yourPersonInformation("Oleg", "Oleg", "12345")
                 .setContinueOrderButton()
@@ -60,8 +62,8 @@ public class MainTest {
     @Order(3)
     public void testCancelOfBuyingThings() {
         basketPage.scanTableBody()
-                .setAddAllItemToCartButton()
-                .setBasketButton();
+                .setAddAllItemToCartButton();
+        basePage.setBasketButton();
         basketPage.setCheckoutButton();
         checkoutPage.yourPersonInformation("Oleg", "Oleg", "12345")
                 .setContinueOrderButton()
@@ -74,10 +76,10 @@ public class MainTest {
     @Order(4)
     public void testDeletingItemsFromTheTrash() {
         basketPage.scanTableBody()
-                .setAddAllItemToCartButton()
-                .setBasketButton();
-        basketPage.setCancelAllButtonFromCart()
-                .setHomeButton()
+                .setAddAllItemToCartButton();
+        basePage.setBasketButton();
+        basketPage.setCancelAllButtonFromCart();
+        basePage.setHomeButton()
                 .shoppingCartBadge.shouldBe(hidden);
     }
 
@@ -86,8 +88,8 @@ public class MainTest {
     @Order(5)
     public void testCheckingTheTotalAmount() {
         basketPage.scanTableBody()
-                .setAddAllItemToCartButton()
-                .setBasketButton();
+                .setAddAllItemToCartButton();
+        basePage.setBasketButton();
         basketPage.setCheckoutButton();
         checkoutPage.yourPersonInformation("Oleg", "Oleg", "12345")
                 .setContinueOrderButton()

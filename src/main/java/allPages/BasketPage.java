@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class BasketPage extends BasePage {
+public class BasketPage {
 
     // Field with products
     SelenideElement tableBody = $(".inventory_list");

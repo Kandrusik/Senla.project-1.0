@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class CheckoutPage extends BasePage {
+public class CheckoutPage  {
 
     // Message text
     public SelenideElement thankYouForYourOrder = $("#checkout_complete_container > h2");

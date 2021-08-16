@@ -10,7 +10,7 @@ import java.util.Properties;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class LoginPage extends BasePage {
+public class LoginPage {
 
     SelenideElement loginField = $("#user-name");
     SelenideElement passwordField = $("#password");
