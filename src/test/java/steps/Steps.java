@@ -1,5 +1,6 @@
 package steps;
 
+import allPages.BasePage;
 import allPages.BasketPage;
 import allPages.CheckoutPage;
 import io.cucumber.java.ru.И;
@@ -13,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class Steps {
 
+    BasePage basePage = new BasePage();
     BasketPage basketPage = new BasketPage();
     CheckoutPage checkoutPage = new CheckoutPage();
 
@@ -25,7 +27,7 @@ public class Steps {
 
     @Тогда("^переходим в корзину и нажимаем Checkout$")
     public void clickOnButtonBasketAndCheckGadgetPrice() {
-        basketPage.setBasketButton();
+        basePage.setBasketButton();
         basketPage.setCheckoutButton();
     }
 
